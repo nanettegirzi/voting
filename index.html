@@ -5,25 +5,39 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Voting Information</title>
+    <title>Celebrity Match Quiz</title>
   </head>
   <body>
     <div class="container">
-      <div id="voting">
-        <h1>Voter Information</h1>
-        <h2>Go <a href = "https://www.vote.org/register-to-vote/washington/?gclid=EAIaIQobChMIu5eb4sbQ2AIVFNtkCh1GTAYSEAAYASAAEgIgqPD_BwE">here</a> if you're not already registerted to vote.
-        <h2>Candidates:</h2>
-        <ul>
-          <li>Mayor: Bob Brown, Christine Smith, Red Green</li>
-          <li>State Senate: Raylie Morris, Richard Marks, Prince</li>
-          <li>Controller: Rachel Miller, Doug Stamper, Eleven </li>
-          <li> <a href="http://www.morecandidates.com">Click here for more information on the candidates</a>
-        </ul>
-      </div>
+      <h1>Which Celebrity Should You Date </h1>
 
-      <div id="under-18">
-        <h1>Sorry you can't yet, but here <a href = "http://nosoupforyou.com">some info</a></h1>
+      <p>Please fill in the follwing information to see your celebrity match!</p>
 
+      <form id="celebritymatch">
+        <div class="form-group" id="ageGroup">
+          <label for="age">Age</label>
+          <input id="age" type="text">
+        </div>
+        <div class="form-group" id="genderGroup">
+          <label for="gender">Gender</label>
+          <select id="gender">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+        </div>
+        <div class="form-group" id="genderGroup">
+          <label for="breakfast">Favorite Breakfast Food</label>
+          <select id="breakfast">
+            <option value="bacon">Bacon</option>
+            <option value="eggs">Eggs</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Show me my match!</button>
+      </form>
+
+      <div id="quote">
+        <p>Your match is<span id="match"></span>!!</p>
       </div>
     </div>
   </body>

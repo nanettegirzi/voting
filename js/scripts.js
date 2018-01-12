@@ -1,12 +1,20 @@
 $(document).ready(function() {
-  var age = parseInt(prompt("How old are you?"));
+  $("form#insurance").submit(function(event) {
+    var age = parseInt($("input#age").val());
+    var gender = $("select#gender").val();
 
-  if (age > 18) {
-    $('#voting').show();
-  } else if (age === 18) {
-    alert("Yay you made to your first election!");
-    $('#voting').show();
-  } else {
-    $('#under-18').show();
-  }
+    if (age) {
+      var quote = (100 - age) * 3;
+      if (gender === 'male' && age < 26) {
+        quote += 50;
+      }
+
+      $("#rate").empty().append(quote);
+      $("#quote").show();
+    } else {
+      alert('Please enter your age.');
+    }
+
+    event.preventDefault();
+  });
 });
